@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.login {
+  background-color: #e5e5e5;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login img {
+  margin-top: 25vmin;
+  width: 66vmin;
+  height: auto;
+  margin-bottom: 7vmin;
+}
+
+.login h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 5vmin;
+  line-height: 61px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fe1936;
+}
+
+.login h2 {
+  margin: 1.6vmin 0 0 0;
+  font-weight: 500;
+  font-size: 2.44vmin;
+  line-height: 3vmin;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.login footer > img {
+  margin: 0;
+  width: 100vw;
+}
+
+.login footer {
+  background-color: #0c0c0c;
+  margin-top: auto;
+}
+
+.login > div > input[type='text'] {
+  width: 45vmin;
+  height: inherit;
+  font-weight: 500;
+  font-size: 2.44vmin;
+  line-height: 2.83vmin;
+  text-indent: 2.34vmin;
+  border: none;
+  margin: none;
+}
+
+.login > div > button {
+  width: 20vmin;
+  height: inherit;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 2.35vmin;
+  line-height: 2.73vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #d93f3f;
+  color: #ffffff;
+  border: none;
+}
+
+.login > div {
+  display: flex;
+  flex-direction: row;
+  margin: 6vmin 0 0 0;
+  width: 65vmin;
+  height: 7vmin;
+  max-width: 65vmin;
+  max-height: 7vmin;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}

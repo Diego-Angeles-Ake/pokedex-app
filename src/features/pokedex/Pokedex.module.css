@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #e5e5e5;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.pokedex > img {
+  width: 100vw;
+}
+
+.pokedex > div > span {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.48vmin;
+  line-height: 3vmin;
+  display: flex;
+  align-items: center;
+}
