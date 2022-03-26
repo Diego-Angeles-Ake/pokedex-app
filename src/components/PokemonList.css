@@ -1,0 +1,65 @@
+/* #root > div > div > ul */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  align-items: baseline;
+}
+.pagination > li.page-item {
+  list-style: none;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c;
+  color: white;
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+}
+
+.page-item {
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.page-item,
+.prev,
+.next {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.prev,
+.next {
+  width: 10vmin;
+  height: 10vmin;
+  background-color: #dd1a1a;
+}
+
+.pagination > li:first-child,
+.pagination > li:last-child {
+  width: 10vmin;
+  height: 10vmin;
+  background-color: #dd1a1a;
+  color: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}

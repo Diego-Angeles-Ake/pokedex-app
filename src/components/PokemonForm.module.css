@@ -1,0 +1,40 @@
+/* #root > div > div > div */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.pokemon {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 4.13vmin;
+}
+
+.pokemon > form > input[type='text'] {
+  width: 47vmin;
+  height: 7vmin;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 2.58vmin;
+  text-indent: 2.49vmin;
+}
+
+.pokemon > form > button {
+  height: 7.62vmin;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 2.58vmin;
+  background-color: #d93f3f;
+  color: #ffffff;
+  border: none;
+}
+
+.pokemon > select {
+  margin-left: 2.49vmin;
+  text-indent: 2vmin;
+  height: 7vmin;
+  width: 48.59vmin;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.86vmin;
+}
