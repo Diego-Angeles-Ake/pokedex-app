@@ -21,7 +21,7 @@ export default function Pokedex() {
     axios
       .get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126')
       .then((res) => {
-        console.dir(res.data.results);
+        // console.dir(res.data.results);
         dispatch(pokemonsAdded(res.data.results));
       });
   }, [dispatch]);
@@ -35,7 +35,7 @@ export default function Pokedex() {
           favorito
         </span>
         <PokemonForm />
-        <PokemonList itemsPerPage={4} />
+        <PokemonList itemsPerPage={16} />
       </div>
     </div>
   );

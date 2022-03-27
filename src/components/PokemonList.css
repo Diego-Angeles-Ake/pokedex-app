@@ -26,11 +26,9 @@
 
 .page-item {
   font-family: Roboto;
-  font-size: 32px;
+  font-size: 3.3vmin;
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
-  letter-spacing: 0em;
   text-align: center;
 }
 
@@ -62,4 +60,127 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+}
+
+/* ------------------------------ Pokemon Card ------------------------------ */
+/* #root > div > div > div.pList > div > div:nth-child(1) */
+.pList {
+  margin-top: 9.39vmin;
+}
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  margin-bottom: 7.22vmin;
+  width: 27vmin;
+  height: 39.53vmin;
+  background-color: #ffffff;
+  /* cool border */
+  border: 10px solid transparent;
+
+  border-image-source: linear-gradient(
+    179.27deg,
+    #b1dbbc -20.76%,
+    #c3dea3 157.95%
+  );
+
+  border-image-slice: 30;
+  /* border: 10px solid #0c0c0c;
+  border-radius: 10px; */
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card > div > img {
+  width: 16.72vmin;
+}
+
+.card > div > h1 {
+  margin: 0;
+  text-transform: capitalize;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.58vmin;
+}
+
+.card > div > h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.44vmin;
+  margin: 0;
+  color: #4f4f4f;
+}
+
+.card > div > span {
+  color: #9f9f9f;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.03vmin;
+}
+
+.card > div > hr {
+  width: 90%;
+}
+
+.stats {
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.stat {
+  margin-bottom: 3.1vmin;
+}
+
+.card > div > div > div.stat > h3 {
+  color: #9f9f9f;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.03vmin;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card > div > div > div.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 9.6vmin;
+  height: 3.51vmin;
+}
+
+.stat > span {
+  font-family: Inter;
+  font-size: 1.65vmin;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.card > div {
+  background-image: linear-gradient(
+    178.92deg,
+    #7ec6c5 0.92%,
+    #abdac6 47.96%,
+    #cae099 99.08%
+  );
+  background-size: 27.1vmin 13.21vmin;
+  background-repeat: no-repeat;
+}
+
+#root > div > div > div.PokemonForm_pokemon__1VNxV {
+  align-self: center;
 }

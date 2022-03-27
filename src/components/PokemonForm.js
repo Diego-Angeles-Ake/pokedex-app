@@ -21,7 +21,7 @@ export default function PokemonForm() {
       e.target.value === 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126'
     ) {
       axios.get(e.target.value).then((res) => {
-        console.dir(res.data.results);
+        // console.dir(res.data.results);
         dispatch(pokemonsAdded(res.data.results));
       });
     } else {

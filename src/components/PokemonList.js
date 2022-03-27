@@ -3,17 +3,23 @@ import React, { useEffect, useState } from 'react';
 import './PokemonList.css';
 
 import { useSelector } from 'react-redux';
+import { Card } from 'react-bootstrap';
+import axios from 'axios';
+import PokemonCard from './PokemonCard';
 
 // const items = [...Array(33).keys()];
 
 function Items({ currentItems }) {
-  console.log(currentItems);
+  // console.log(currentItems);
+
   return (
     <div className='items'>
       {currentItems &&
-        currentItems.map((item) => (
-          <div key={item.name || item.pokemon.name}>
-            <h3>Item #{item.name || item.pokemon.name}</h3>
+        currentItems.map((item, i) => (
+          <div key={item.name || item.pokemon.name} className='card'>
+            {/* <h3>Item #{item.name || item.pokemon.name}</h3>
+            <h3>{pokemonsData.length > 0 && pokemonsData[i].name}</h3> */}
+            {<PokemonCard item={item} />}
           </div>
         ))}
     </div>
@@ -34,7 +40,7 @@ function PaginatedItems({ itemsPerPage }) {
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     setCurrentItems(items.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(items.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, items]);
@@ -42,9 +48,9 @@ function PaginatedItems({ itemsPerPage }) {
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    // console.log(
+    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
+    // );
     setItemOffset(newOffset);
   };
 

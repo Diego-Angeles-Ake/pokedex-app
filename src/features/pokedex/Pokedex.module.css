@@ -18,7 +18,6 @@
 .container {
   max-width: 70vw;
   margin: 0 15vmin;
-  align-self: center;
 }
 .container > span {
   font-family: 'Inter';
