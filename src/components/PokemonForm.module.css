@@ -38,3 +38,7 @@
   font-weight: 400;
   font-size: 1.86vmin;
 }
+
+.pokemon > select option:checked {
+  background-color: #ed8f8f;
+}

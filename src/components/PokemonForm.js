@@ -3,20 +3,18 @@ import styles from './PokemonForm.module.css';
 
 import { useDispatch } from 'react-redux';
 import { pokemonsAdded } from '../features/pokedex/pokedexSlice';
+import { pokemonsSearch } from '../features/pokedex/pokedexSlice';
 
 import axios from 'axios';
 
 export default function PokemonForm() {
   const [pokemon, setPokemon] = useState('');
-  const [pokemonType, setPokemonType] = useState('');
 
   const dispatch = useDispatch();
-
   const handlePokemon = (e) => {
-    console.dir(e);
+    setPokemon(e.target.value);
   };
   const handlePokemonType = (e) => {
-    setPokemonType(e.target.value);
     if (
       e.target.value === 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126'
     ) {
@@ -26,10 +24,16 @@ export default function PokemonForm() {
       });
     } else {
       axios.get(e.target.value).then((res) => {
-        console.dir(res.data.pokemon);
+        // console.dir(res.data.pokemon);
         dispatch(pokemonsAdded(res.data.pokemon));
       });
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(pokemonsSearch(pokemon.toLowerCase()));
   };
 
   return (
@@ -41,7 +45,9 @@ export default function PokemonForm() {
           value={pokemon}
           onChange={handlePokemon}
         />
-        <button>Comenzar</button>
+        <button type='submit' onClick={handleSubmit}>
+          Comenzar
+        </button>
       </form>
 
       <select id='pokemon-type' onChange={handlePokemonType}>

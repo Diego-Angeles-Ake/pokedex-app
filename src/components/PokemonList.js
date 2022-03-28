@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react';
 import './PokemonList.css';
 
 import { useSelector } from 'react-redux';
-import { Card } from 'react-bootstrap';
-import axios from 'axios';
 import PokemonCard from './PokemonCard';
 
 // const items = [...Array(33).keys()];
 
 function Items({ currentItems }) {
-  // console.log(currentItems);
+  // console.log(currentItems.length);
+  if (currentItems?.length < 1) {
+    return <h1>No existe un pokemón del tipo que buscas!</h1>;
+  }
 
   return (
     <div className='items'>

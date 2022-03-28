@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const typeEsLang = {
   normal: 'Normal',
@@ -28,6 +30,8 @@ export default function PokemonCard({ item }) {
   const [stats, setStats] = useState(null);
   const [sprite, setSprite] = useState(null);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (item?.name) {
       axios.get(item.url).then((res) => {
@@ -44,10 +48,18 @@ export default function PokemonCard({ item }) {
         setSprite(res.data.sprites.other['official-artwork'].front_default);
       });
     }
-  }, []);
+  }, [item?.name, item.pokemon?.name, item?.pokemon?.url, item?.url]);
+
+  const handleDirect = () => {
+    if (item?.name) {
+      navigate(`${item.name}`);
+    } else if (item?.pokemon?.name) {
+      navigate(`${item?.pokemon?.name}`);
+    }
+  };
 
   return (
-    <div>
+    <div onClick={handleDirect}>
       {sprite && <img src={sprite} alt='' />}
       <h1>{item?.name || item?.pokemon?.name}</h1>
       <h2>
@@ -74,12 +86,13 @@ export default function PokemonCard({ item }) {
               e.stat.name === 'speed'
             ) {
               return (
-                <div className={`stat`}>
+                <div className={`stat`} key={uuidv4()}>
                   <h3>{e.stat.name}</h3>
                   <span>{e.base_stat}</span>
                 </div>
               );
             }
+            return null;
           })}
       </div>
     </div>
