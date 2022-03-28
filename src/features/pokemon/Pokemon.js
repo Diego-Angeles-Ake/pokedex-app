@@ -3,6 +3,8 @@ import styles from './Pokemon.module.css';
 import banner from '../../assets/pokedex/pokedex_banner.png';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import pokeball from '../../assets/pokemon/pokeball.svg';
 
 export default function Pokemon() {
   const { id } = useParams();
@@ -33,6 +35,53 @@ export default function Pokemon() {
             <h1>{p.name}</h1>
             <div></div>
           </div>
+          <div>
+            <div>
+              <h2>Peso</h2>
+              <span>{p.weight}</span>
+            </div>
+            <div>
+              <h2>Altura</h2>
+              <span>{p.height}</span>
+            </div>
+          </div>
+
+          <div>
+            <div className={styles.type}>
+              <h2>Tipo</h2>
+              <div>
+                {p?.types?.map((e) => {
+                  return <div key={uuidv4()}>{e.type.name}</div>;
+                })}
+              </div>
+            </div>
+            <div className={styles.abilities}>
+              <h2>Habilidades</h2>
+              <div>
+                {p?.abilities?.map((e) => {
+                  return <div key={uuidv4()}>{e.ability.name}</div>;
+                })}
+              </div>
+            </div>
+          </div>
+
+          <section>
+            <div>
+              <h2>Stats</h2>
+              <div></div>
+              <img src={pokeball} alt='' />
+            </div>
+            <div>
+              <h2>HP</h2>
+              <span>{`${p.stats[0].base_stat}`}/200</span>
+            </div>
+            <div>
+              <div
+                style={{ width: `${(p.stats[0].base_stat / 200) * 62.29}vw` }}
+              ></div>
+              <div></div>
+            </div>
+          </section>
         </div>
       )}
     </div>

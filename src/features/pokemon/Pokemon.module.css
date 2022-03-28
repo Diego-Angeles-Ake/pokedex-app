@@ -48,6 +48,12 @@
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background: #ffffff;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  max-width: 90%;
 }
 
 .info > div > div:nth-child(2) {
@@ -66,12 +72,211 @@
   text-align: center;
   color: rgba(65, 100, 96, 1);
   height: 4.44vmin;
-  width: 8.05vmin;
+  min-width: 8.05vmin;
   margin-top: 4.64vmin;
 }
 
 .info > div > div:nth-child(3) {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2.27vmin;
+  align-self: center;
+}
+
+.info > div > div:nth-child(3) > div:nth-child(1),
+.info > div > div:nth-child(3) > div:nth-child(3) {
+  height: 1px;
+  width: 21.91vw;
+  background-color: #9f9f9f;
+}
+
+.info > div > div:nth-child(3) > h1 {
+  font-family: Roboto;
+  font-size: 4.64vmin;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  color: #416460;
+  margin: 0 2.43vmin;
+}
+
+.info > div > div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info > div > div:nth-child(4) > div > h2 {
+  font-family: Roboto;
+  font-size: 1.65vmin;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  align-self: center;
+}
+
+.info > div > div:nth-child(4) > div > span {
+  font-family: Roboto;
+  font-size: 2.58vmin;
+  font-style: normal;
+  font-weight: 500;
+  align-self: center;
+  padding: 0 4.85vmin;
+}
+
+.info > div > div:nth-child(4) > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3.3vmin;
+}
+
+.info > div > div:nth-child(5) {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  margin-bottom: 12.69vmin;
+}
+
+.type,
+.abilities {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.type > h2,
+.abilities > h2 {
+  font-family: Roboto;
+  font-size: 3.1vmin;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 3.3vmin;
+}
+
+/* #root > div > div > div:nth-child(5) > div:nth-child(1) */
+.type > div,
+.abilities > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type > div > div {
+  font-family: Roboto;
+  font-size: 2.58vmin;
+  font-style: normal;
+  font-weight: 500;
+  background: #85c9c5;
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 2px;
+  margin: 0 2.06vmin;
+  width: 21.36vmin;
+  height: 4.85vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.06vmin;
+  align-self: center;
+}
+
+.abilities > div > div {
+  font-family: Roboto;
+  font-size: 2.58vmin;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 2px;
+  margin: 0 2.06vmin;
+  width: 21.36vmin;
+  height: 4.85vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 2.06vmin;
+}
+
+/* #root > div */
+.info > div > section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info > div > section > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 64.7vw;
+  margin-bottom: 1.37vmin;
+}
+
+.info > div > section > div:nth-child(1) > div {
+  width: 47.22vw;
+  height: 1px;
+  background-color: #d3d3d3;
+}
+
+.info > div > section > div > h2 {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 4.64vmin;
+  font-style: normal;
+  font-weight: 500;
+  color: #302f2f;
+}
+
+.info > div > section > div > img {
+  width: 9.18vmin;
+}
+
+.info > div > section > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 62.29vw;
+  align-items: center;
+}
+.info > div > section > div:nth-child(2) > h2 {
+  font-family: Roboto;
+  font-size: 2.48vmin;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.info > div > section > div:nth-child(2) > span {
+  font-family: Roboto;
+  font-size: 2.06vmin;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.info > div > section > div:nth-child(3) {
+  width: 62.29vw;
+  height: 3.51vmin;
+}
+
+.info > div > section > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 3.51vmin;
+}
+
+.info > div > section > div:nth-child(3) > div:nth-child(1) {
+  background: linear-gradient(90deg, #fcd676 -2.25%, #e6901e 133.18%);
+}
+
+.info > div > section > div:nth-child(3) > div:nth-child(2) {
+  background: #f6f6f6;
 }
