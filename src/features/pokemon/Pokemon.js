@@ -73,17 +73,64 @@ export default function Pokemon() {
             </div>
             <div>
               <h2>HP</h2>
-              <span>{`${p.stats[0].base_stat}`}/200</span>
+              <span>{`${p?.stats?.[0]?.base_stat}`}/200</span>
             </div>
             <div>
               <div
-                style={{ width: `${(p.stats[0].base_stat / 200) * 62.29}vw` }}
+                style={{
+                  width: `${(p?.stats?.[0]?.base_stat / 200) * 62.29}vw`,
+                }}
               ></div>
-              <div></div>
+            </div>
+            <div>
+              <h2>Ataque</h2>
+              <span>{`${p?.stats?.[1]?.base_stat}`}/200</span>
+            </div>
+            <div>
+              <div
+                style={{
+                  width: `${(p?.stats?.[1]?.base_stat / 200) * 62.29}vw`,
+                }}
+              ></div>
+            </div>
+            <div>
+              <h2>Defensa</h2>
+              <span>{`${p?.stats?.[2]?.base_stat}`}/200</span>
+            </div>
+            <div>
+              <div
+                style={{
+                  width: `${(p?.stats?.[2]?.base_stat / 200) * 62.29}vw`,
+                }}
+              ></div>
+            </div>
+            <div>
+              <h2>Velocidad</h2>
+              <span>{`${p?.stats?.[5]?.base_stat}`}/200</span>
+            </div>
+            <div>
+              <div
+                style={{
+                  width: `${(p?.stats?.[5]?.base_stat / 200) * 62.29}vw`,
+                }}
+              ></div>
             </div>
           </section>
         </div>
       )}
+      <section>
+        <div>
+          <h2>Movements</h2>
+          <div></div>
+          <img src={pokeball} alt='' />
+        </div>
+        {/* moves[0].move.name */}
+        <div>
+          {p?.moves?.map((m) => {
+            return <div key={uuidv4()}>{m.move.name}</div>;
+          })}
+        </div>
+      </section>
     </div>
   );
 }
